@@ -11,7 +11,7 @@ public class Main {
 		int x = n;
 		while (true) {
 			int y = (x + n/x)/2;
-		    if( y >= x ) return x;
+		    if(y >= x) return x;
 		    x = y;
 		}
 	}
@@ -47,9 +47,9 @@ public class Main {
 	
 	private int[] squaresUpTo(int highestSquare) {
 		int bound = sqrt(highestSquare);
-		int[] numbs = new int[bound];
-		for (int i = 1; i <= bound; i++) {
-			numbs[i-1] = (int)Math.ceil(Math.pow(i, 2));
+		int[] numbs = new int[bound + 1];
+		for (int i = 0; i <= bound; i++) {
+			numbs[i] = (int)Math.ceil(Math.pow(i, 2));
 		}
 		return numbs;
 	}
